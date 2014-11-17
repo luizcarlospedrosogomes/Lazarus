@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="28">
+      <Unit0>
+        <Filename Value="atm.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="atm"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3"/>
+        <CursorPos X="43" Y="19"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="telainicial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaInicial"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="144"/>
+        <CursorPos X="22" Y="170"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="conexaodb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DB"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="conexaoDB"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2"/>
+        <CursorPos X="1" Y="36"/>
+        <UsageCount Value="202"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="carregamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="carregar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="carregamento"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="14"/>
+        <CursorPos X="3" Y="42"/>
+        <UsageCount Value="202"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="telalogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaLogin"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="83"/>
+        <CursorPos X="36" Y="95"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="telaadmin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frAdmin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaAdmin"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="88"/>
+        <CursorPos X="78" Y="114"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="telainserinotas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frInserirNotas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaInseriNotas"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="80"/>
+        <CursorPos X="6" Y="107"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="funcoesuteis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="funcoesUteis"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="91" Y="17"/>
+        <UsageCount Value="200"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="telasaque.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frSaque"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telasaque"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="6" Y="1"/>
+        <UsageCount Value="210"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="telatransferencia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frTransferencia"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaTransferencia"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="48"/>
+        <CursorPos X="24" Y="65"/>
+        <UsageCount Value="211"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="telasaqueusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frSaqueUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaSaqueUsuario"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="36"/>
+        <CursorPos X="14" Y="77"/>
+        <UsageCount Value="210"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="telausuariouser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaUsuarioUser"/>
+        <EditorIndex Value="17"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="73"/>
+        <CursorPos X="26" Y="114"/>
+        <UsageCount Value="210"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="funcoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="funcoes"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="118"/>
+        <CursorPos X="21" Y="129"/>
+        <UsageCount Value="207"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="telasaquenotas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frSaqueNotas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaSaqueNotas"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="10"/>
+        <CursorPos X="15" Y="30"/>
+        <UsageCount Value="231"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="contanotasparasaque.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContaNotasParaSaque"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1"/>
+        <CursorPos X="1" Y="1"/>
+        <UsageCount Value="222"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="dadosusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="dadosUsuario"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="105"/>
+        <CursorPos X="78" Y="127"/>
+        <UsageCount Value="217"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="funcoesdesaque.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FuncoesDeSaque"/>
+        <EditorIndex Value="16"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="144"/>
+        <CursorPos X="46" Y="224"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="limparforms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LimparForms"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="21"/>
+        <CursorPos X="22" Y="71"/>
+        <UsageCount Value="201"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="telastatusoperacao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frStausOperacao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaStatusOperacao"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="63"/>
+        <CursorPos X="3" Y="74"/>
+        <UsageCount Value="201"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="funcoesdetransferencia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FuncoesDeTransferencia"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="21"/>
+        <CursorPos X="3" Y="42"/>
+        <UsageCount Value="197"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="telastatustransferencia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frStatusTransferencia"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaStatusTransferencia"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="62"/>
+        <CursorPos X="3" Y="53"/>
+        <UsageCount Value="172"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="teladeposito.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frDeposito"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaDeposito"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="101"/>
+        <CursorPos X="51" Y="75"/>
+        <UsageCount Value="145"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="telastatusdeposito.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frStatusDeposito"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaStatusDeposito"/>
+        <EditorIndex Value="15"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="54"/>
+        <CursorPos X="25" Y="69"/>
+        <UsageCount Value="145"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="funcoesdedeposito.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FuncoesDeDeposito"/>
+        <EditorIndex Value="14"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="1" Y="49"/>
+        <UsageCount Value="145"/>
+        <Loaded Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="teladepositofinal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frDepositoFinal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaDepositoFinal"/>
+        <EditorIndex Value="13"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="20"/>
+        <CursorPos X="1" Y="40"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2165"/>
+        <CursorPos X="1" Y="2183"/>
+        <UsageCount Value="63"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="telasaqueusuario.lfm"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="13"/>
+        <CursorPos X="5" Y="51"/>
+        <UsageCount Value="59"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3608"/>
+        <CursorPos X="1" Y="3636"/>
+        <UsageCount Value="7"/>
+      </Unit27>
+    </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="telasaqueusuario.pas"/>
+        <Caret Line="26" Column="6" TopLine="1"/>
+      </Position1>
+      <Position2>
+        <Filename Value="telainserinotas.pas"/>
+        <Caret Line="177" Column="46" TopLine="160"/>
+      </Position2>
+      <Position3>
+        <Filename Value="telainserinotas.pas"/>
+        <Caret Line="82" Column="35" TopLine="75"/>
+      </Position3>
+      <Position4>
+        <Filename Value="telainserinotas.pas"/>
+        <Caret Line="88" Column="3" TopLine="86"/>
+      </Position4>
+      <Position5>
+        <Filename Value="telaadmin.pas"/>
+        <Caret Line="98" Column="54" TopLine="58"/>
+      </Position5>
+      <Position6>
+        <Filename Value="telaadmin.pas"/>
+        <Caret Line="126" Column="3" TopLine="109"/>
+      </Position6>
+      <Position7>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="75" Column="71" TopLine="52"/>
+      </Position7>
+      <Position8>
+        <Filename Value="telalogin.pas"/>
+        <Caret Line="98" Column="25" TopLine="98"/>
+      </Position8>
+      <Position9>
+        <Filename Value="telasaqueusuario.pas"/>
+        <Caret Line="64" Column="77" TopLine="29"/>
+      </Position9>
+      <Position10>
+        <Filename Value="telatransferencia.pas"/>
+        <Caret Line="23" Column="42" TopLine="10"/>
+      </Position10>
+      <Position11>
+        <Filename Value="telaadmin.pas"/>
+        <Caret Line="101" Column="44" TopLine="93"/>
+      </Position11>
+      <Position12>
+        <Filename Value="telainicial.pas"/>
+        <Caret Line="164" Column="7" TopLine="131"/>
+      </Position12>
+      <Position13>
+        <Filename Value="telatransferencia.pas"/>
+        <Caret Line="140" Column="32" TopLine="109"/>
+      </Position13>
+      <Position14>
+        <Filename Value="funcoesdetransferencia.pas"/>
+        <Caret Line="43" Column="77" TopLine="18"/>
+      </Position14>
+      <Position15>
+        <Filename Value="funcoesdetransferencia.pas"/>
+        <Caret Line="50" Column="41" TopLine="25"/>
+      </Position15>
+      <Position16>
+        <Filename Value="funcoesdetransferencia.pas"/>
+        <Caret Line="45" Column="50" TopLine="25"/>
+      </Position16>
+      <Position17>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="37" Column="67" TopLine="1"/>
+      </Position17>
+      <Position18>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="38" Column="67" TopLine="2"/>
+      </Position18>
+      <Position19>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="39" Column="67" TopLine="3"/>
+      </Position19>
+      <Position20>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="42" Column="67" TopLine="6"/>
+      </Position20>
+      <Position21>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="43" Column="67" TopLine="7"/>
+      </Position21>
+      <Position22>
+        <Filename Value="telastatusoperacao.pas"/>
+        <Caret Line="110" Column="3" TopLine="86"/>
+      </Position22>
+      <Position23>
+        <Filename Value="telastatusoperacao.pas"/>
+        <Caret Line="244" Column="5" TopLine="217"/>
+      </Position23>
+      <Position24>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="33" Column="19" TopLine="19"/>
+      </Position24>
+      <Position25>
+        <Filename Value="telastatusdeposito.pas"/>
+        <Caret Line="75" Column="45" TopLine="63"/>
+      </Position25>
+      <Position26>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="49" Column="24" TopLine="22"/>
+      </Position26>
+      <Position27>
+        <Filename Value="teladepositofinal.pas"/>
+        <Caret Line="40" Column="1" TopLine="20"/>
+      </Position27>
+      <Position28>
+        <Filename Value="teladeposito.pas"/>
+        <Caret Line="78" Column="27" TopLine="67"/>
+      </Position28>
+      <Position29>
+        <Filename Value="telasaqueusuario.pas"/>
+        <Caret Line="67" Column="24" TopLine="65"/>
+      </Position29>
+      <Position30>
+        <Filename Value="teladeposito.pas"/>
+        <Caret Line="146" Column="6" TopLine="121"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+  <EditorMacros Count="0"/>
+</CONFIG>

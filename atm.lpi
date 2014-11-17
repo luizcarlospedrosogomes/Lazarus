@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="atm"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="SQLDBLaz"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="25">
+      <Unit0>
+        <Filename Value="atm.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="atm"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="telainicial.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaInicial"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="conexaodb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DB"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="conexaoDB"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="carregamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="carregar"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="carregamento"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="telalogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaLogin"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="telaadmin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frAdmin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaAdmin"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="telainserinotas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frInserirNotas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaInseriNotas"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="funcoesuteis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="funcoesUteis"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="telasaque.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frSaque"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telasaque"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="telatransferencia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frTransferencia"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaTransferencia"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="telasaqueusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frSaqueUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaSaqueUsuario"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="telausuariouser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaUsuarioUser"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="funcoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="funcoes"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="telasaquenotas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frSaqueNotas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaSaqueNotas"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="contanotasparasaque.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ContaNotasParaSaque"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="dadosusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="dadosUsuario"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="funcoesdesaque.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FuncoesDeSaque"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="limparforms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="LimparForms"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="telastatusoperacao.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frStausOperacao"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaStatusOperacao"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="funcoesdetransferencia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FuncoesDeTransferencia"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="telastatustransferencia.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frStatusTransferencia"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaStatusTransferencia"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="teladeposito.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frDeposito"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaDeposito"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="telastatusdeposito.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frStatusDeposito"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaStatusDeposito"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="funcoesdedeposito.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FuncoesDeDeposito"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="teladepositofinal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frDepositoFinal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="telaDepositoFinal"/>
+      </Unit24>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="atm"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="5">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EInvalidOperation"/>
+      </Item4>
+      <Item5>
+        <Name Value="EDatabaseError"/>
+      </Item5>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

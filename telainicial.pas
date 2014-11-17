@@ -1,0 +1,205 @@
+unit telaInicial;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    Button1: TButton;
+    btDeposito: TButton;
+    lbError: TLabel;
+    lbInsiraCartao: TLabel;
+    lbNota50: TLabel;
+    lbNota100: TLabel;
+    lbNota20: TLabel;
+    lbNota10: TLabel;
+    lbNota5: TLabel;
+    lbNota2: TLabel;
+    lbNotasDisponiveis: TLabel;
+    SaqueSem: TButton;
+    status: TPanel;
+    procedure btDepositoClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure atualizaStatus();
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormShow(Sender: TObject);
+    procedure stSaque();
+    procedure SaqueSemClick(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.lfm}
+uses conexaoDB,telaLogin, funcoes, telaDeposito;
+{ TForm1 }
+function notasTelaInicial():integer;
+begin
+     if getNotas100() > 1 then
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota100.Caption:='R$ 100';
+     end
+     else
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota100.Caption:='';
+     end;
+     if getNotas50() > 1 then
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota50.Caption:='R$ 50';
+     end
+     else
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota50.Caption:='';
+     end;
+     if getNotas20() > 1 then
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota20.Caption:='R$ 20';
+     end
+     else
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota20.Caption:='';
+     end;
+     if getNotas10() > 1 then
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota10.Caption:='R$ 10';
+     end
+     else
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota10.Caption:='';
+     end;
+     if getNotas5() > 1 then
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota5.Caption:='R$ 5';
+     end
+     else
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota5.Caption:='';
+     end;
+     if getNotas2() > 1 then
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota2.Caption:='R$ 2';
+     end
+     else
+     begin
+          Application.ProcessMessages;
+          Form1.lbNota2.Caption:='';
+     end;
+
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+
+     //atualizaStatus(Sender: TObject);
+end;
+
+procedure TForm1.btDepositoClick(Sender: TObject);
+begin
+   if caixaStatus() = 1 then
+   begin
+     frDeposito.Show;
+     Form1.Close;
+   end
+   else
+   begin
+     lbError.Caption:='Caixa Inativo. Por Favor Utilize outro Caixa.';
+     Application.ProcessMessages;
+     Sleep(3000);
+     lbError.Caption:='';
+   end;
+end;
+
+procedure TForm1.atualizaStatus();
+ begin
+case caixaStatus() of
+1:status.Visible:= false;
+2:begin
+      status.Color := clRed;
+      status.Caption:='Caixa Em Manutencao';
+  end;
+end;
+end;
+
+procedure TForm1.FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+  );
+begin
+
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+    stSaque();
+    notasTelaInicial();
+   // atualizaStatus()
+   //caixaStatus();
+case caixaStatus() of
+  1:begin
+      status.Visible:= false;
+      lbNotasDisponiveis.Show;
+      lbNota2.Show;
+      lbNota5.Show;
+      lbNota10.Show;
+      lbNota20.Show;
+      lbNota50.Show;
+      lbNota100.Show;
+      btDeposito.Show;
+  end;
+  2:begin
+      lbNotasDisponiveis.Hide;
+      lbNota2.Hide;
+      lbNota5.Hide;
+      lbNota10.Hide;
+      lbNota20.Hide;
+      lbNota50.Hide;
+      lbNota100.Hide;
+      btDeposito.Hide;
+      Application.ProcessMessages;
+      status.Visible:=True;
+      status.Color := clRed;
+      status.Caption:='Caixa Em Manutencao';
+  end;
+end;
+
+end;
+
+procedure TForm1.SaqueSemClick(Sender: TObject);
+begin
+
+     Form2.Show;
+     Form1.Close;
+end;
+procedure TForm1.stSaque();
+begin
+     if statusSaque=1 then
+         Form1.lbNotasDisponiveis.Caption:='      Opção de saque Indisponivel'
+     else
+         Form1.atualizaStatus();
+end;
+
+end.
+

@@ -1,0 +1,150 @@
+unit dadosUsuario;
+
+{$mode objfpc}{$H+}
+
+interface
+  uses     Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ComCtrls, variants;
+
+ var idcartaoUsuario, nCartaoUsuario, nomeUsuario, nConta, dataNascUsuario, saldoUsuario, cpfUsuario, dataCriacaoContaUsuario : String;
+
+ function tipoUsuario(nCartao :String):integer;
+ function verificaExistir(nCartao, senha : String):integer;
+ function verificaCartaoAtivo(nCartao :String):integer;
+ function validaUsuario(nCartao, senha : String):integer;
+ function caixaSt:Integer;
+ function contaUsuario(nCartao :String):String;
+ function getSaldoUsuario():integer;
+
+implementation
+uses conexaoDB, telaLogin, funcoes;
+
+function validaUsuario(nCartao, senha: String): integer;
+begin
+  if (Length(nCartao) = 19) And (Length(senha) = 4) then
+  begin
+       if verificaExistir(nCartao, senha) = 1 then
+       begin
+           if tipoUsuario(nCartao) = 1 then
+                validaUsuario := 1 // usuario administrador
+           else
+               begin
+               if caixaSt =1 then
+                  validaUsuario := 4// usuario comum
+               else
+                  validaUsuario := 5;// caixa Inativo
+               end;
+       end
+       else
+           validaUsuario := 2;//usuario nao existe
+  end
+  else
+      validaUsuario := 3;//insercao de n cartao e/ou senha incorretos
+
+
+end;
+function verificaExistir(nCartao, senha: String): integer;
+var nCartaoDB, senhaDB :String;
+begin
+
+try
+ DB.SQLQuery1.SQL.Text:='SELECT idcartao, numero, senha, status FROM cartao WHERE numero ='''+nCartao+''' limit 1';
+ DB.SQLQuery1.Open;
+ nCartaoDB:=VarToStr(DB.SQLQuery1['numero']);
+ senhaDB:= VarToStr(DB.SQLQuery1['senha']);
+ idcartaoUsuario := VarToStr(DB.SQLQuery1['idcartao']);
+  DB.SQLQuery1.Close;
+if  (nCartaoDB= nCartao) And (senhaDB = senha) then
+ begin
+    verificaExistir := 1;
+    nCartaoUsuario:= nCartaoDB;
+    contaUsuario(nCartao);
+ end
+ else
+     verificaExistir:= 0;
+except
+   On E:Exception do
+   falhaBanco();
+end;
+
+
+end;
+
+function tipoUsuario(nCartao :String):integer;
+begin
+ if nCartao = '0001-0001-0001-0001' then
+    tipoUsuario := 1 //tela admin
+ else
+    tipoUsuario :=0;
+end;
+
+function verificaCartaoAtivo(nCartao :String): integer;
+begin
+try
+
+  DB.SQLQuery1.SQL.Text:='SELECT numero, senha, status FROM cartao WHERE numero ='''+nCartao+''' limit 1';
+  DB.SQLQuery1.Open;
+  if DB.SQLQuery1['status'] = 1 then
+      verificaCartaoAtivo:= 1
+  else
+      verificaCartaoAtivo:= 0;
+  DB.SQLQuery1.Close;
+
+except
+         On E:Exception do
+         falhaBanco();
+         end;
+end;
+
+function caixaSt:Integer;
+begin
+try
+
+  DB.SQLQuery1.SQL.Text:='SELECT status FROM caixa WHERE idcaixa =1';
+  DB.SQLQuery1.Open;
+  if DB.SQLQuery1['status'] = 1 then
+     caixaSt := 1
+  else
+     caixaSt:= 2;
+
+  DB.SQLQuery1.Close;
+
+except
+         On E:Exception do
+         falhaBanco();
+         end;
+
+end;
+
+function contaUsuario(nCartao: String): String;
+begin
+  try
+   DB.SQLQuery1.SQL.Text:='select nome, conta.idconta as contaUsuario, datanasc, cpf, saldo, datacriacao FROM cartao JOIN cliente ON cartao.idcliente =cliente.idcliente JOIN conta ON conta.idconta = cartao.idcartao  where numero ='''+nCartao+'''';
+   DB.SQLQuery1.Open;
+   nomeUsuario:=VarToStr(DB.SQLQuery1['nome']);
+   nConta:=VarToStr(DB.SQLQuery1['contaUsuario']);
+   dataNascUsuario:=VarToStr(DB.SQLQuery1['datanasc']);
+   cpfUsuario:=VarToStr(DB.SQLQuery1['cpf']);
+   saldoUsuario:=VarToStr(DB.SQLQuery1['saldo']);
+   dataCriacaoContaUsuario:= VarToStr(DB.SQLQuery1['datacriacao']);
+   DB.SQLQuery1.Close
+
+  except
+         On E:Exception do
+         falhaBanco();
+         end;
+
+
+end;
+
+function getSaldoUsuario():integer;
+begin
+{        DB.SQLQuery1.SQL.Text:='SELECT saldo, conta.idcartao FROM conta JOIN cartao ON conta.idconta = cartao.idcartao WHERE cartao.numero = '''+nCartaoUsuario+'''';
+        DB.SQLQuery1.Open;
+        saldoContaUsario :=StrToInt(DB.SQLQuery1['saldo']);
+        idCartao:= DB.SQLQuery1['idcartao'];
+        DB.SQLQuery1.Close;
+}
+end;
+
+end.

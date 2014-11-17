@@ -1,0 +1,92 @@
+unit LimparForms;
+
+{$mode objfpc}{$H+}
+
+interface
+  uses     Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ComCtrls;
+
+  var tela : Integer;
+
+  function limparTelaLogin():Integer;
+  function limparDadosUsuario():Integer;
+  function limparTelaInsirirNotas():Integer;
+  function exibirTela(tela :Integer): Integer;
+  function limparFormTransferencia():Integer;
+  function limparFormDeposito():Integer;
+
+implementation
+uses telaLogin, dadosUsuario, telaInicial, telaInseriNotas, FuncoesDeTransferencia, telaTransferencia, telaDeposito;
+
+function limparTelaLogin():Integer;
+begin
+  Form2.edInserirSenha.Text := '';
+  Form2.edInsirirNCartao.Text := '';
+end;
+
+function limparDadosUsuario():Integer;
+begin
+  nCartaoUsuario:='';
+  nConta:='';
+  nomeUsuario:='';
+  dataNascUsuario:='';
+  saldoUsuario:='';
+  cpfUsuario:='';
+  nomeContaDestino:='';
+  dataNascContaDestino:='';
+  cpfContaDestino:='';
+  numeroContaDestino:='';
+  saldoContaDestino:='';
+end;
+function limparTelaInsirirNotas: Integer;
+begin
+  frInserirNotas.edAddNota100.Text :='0';
+  frInserirNotas.edAddNota50.Text :='0';
+  frInserirNotas.edAddNotas20.Text :='0';
+  frInserirNotas.edAddNotas10.Text :='0';
+  frInserirNotas.edAddNotas5.Text :='0';
+  frInserirNotas.edAddNotas2.Text :='0';
+
+end;
+function exibirTela(tela :Integer): Integer;
+begin
+      case tela of
+       1:begin
+          Result := 1; //saque
+          //tela:=0;
+         end;
+       2:begin
+          Result := 2;//transferencia
+         // tela:=0;
+         end;
+       3:begin
+          Result := 3;//Deposito
+          //tela:=0;
+       end;
+      4:begin
+          Result := 4;//Saldo
+          //tela:=0;
+       end;
+      5:begin
+          Result := 5;//Saldo
+          //tela:=0;
+       end
+      end;
+
+end;
+function limparFormTransferencia():Integer;
+begin
+     frTransferencia.edTransferenciaValor.Text:='';
+     frTransferencia.edTransferenciaConta.Text:='';
+     frTransferencia.edTransferenciaAgencia.Text:='';
+end;
+
+function limparFormDeposito():Integer;
+begin
+    frDeposito.edDepositoAgencia.Text:='';
+    frDeposito.edDepositoConta.Text:='';
+    frDeposito.edDepositoValor.Text:='';
+end;
+
+end.
+

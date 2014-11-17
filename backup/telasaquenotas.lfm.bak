@@ -1,0 +1,79 @@
+object frSaqueNotas: TfrSaqueNotas
+  Left = 308
+  Height = 555
+  Top = 95
+  Width = 979
+  Caption = 'Caixa 1 - Saque Notas'
+  ClientHeight = 0
+  ClientWidth = 0
+  OnCreate = FormCreate
+  LCLVersion = '1.2.4.0'
+  object btSaqueNotaCem: TButton
+    Left = 96
+    Height = 81
+    Top = 88
+    Width = 256
+    Caption = 'R$ 100,00'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btSaqueNotaCinquenta: TButton
+    Left = 576
+    Height = 73
+    Top = 88
+    Width = 275
+    Caption = 'R$ 50,00'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btSaqueNotaVinte: TButton
+    Left = 96
+    Height = 73
+    Top = 240
+    Width = 256
+    Caption = 'R$ 20,00'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btSaqueNotaDez: TButton
+    Left = 96
+    Height = 81
+    Top = 400
+    Width = 259
+    Caption = 'R$ 10,00'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btSaqueNotaCinco: TButton
+    Left = 576
+    Height = 73
+    Top = 232
+    Width = 275
+    Caption = 'R$ 5,00'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 4
+  end
+  object btSaqueNotaDois: TButton
+    Left = 576
+    Height = 73
+    Top = 400
+    Width = 275
+    Caption = 'R$ 2,00'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Left = 56
+    Height = 15
+    Top = 41
+    Width = 34
+    Caption = 'Label1'
+    ParentColor = False
+  end
+end

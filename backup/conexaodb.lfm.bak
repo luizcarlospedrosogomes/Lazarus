@@ -1,0 +1,36 @@
+object DB: TDB
+  Left = 754
+  Height = 240
+  Top = 166
+  Width = 320
+  Caption = 'DB'
+  LCLVersion = '1.2.4.0'
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = PQConnection1
+    Transaction = SQLTransaction1
+    Params = <>
+    left = 94
+    top = 104
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = PQConnection1
+    left = 192
+    top = 125
+  end
+  object PQConnection1: TPQConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'atm'
+    KeepConnection = False
+    Password = 'sa'
+    Transaction = SQLTransaction1
+    UserName = 'postgres'
+    HostName = 'localhost'
+    LogEvents = []
+    Role = 'postgres'
+    left = 38
+    top = 125
+  end
+end

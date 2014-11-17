@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus2\fpc\2.6.4\bin\i386-win32\fpc.exe" Date="1150455029"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -vewnhi &quot;-Fic:\Users\LuizCarlos\Documents\UTFPR\3 - PERIODO\ProjetoFinal\projeto\lib\i386-win32&quot; -Fuc:\lazarus2\components\sqldb\lib\i386-win32\win32 -Fuc:\lazarus2\components\ideintf\units\i386-win32\win32 -Fuc:\lazarus2\components\synedit\units\i386-win32\win32 -Fuc:\lazarus2\components\lazcontrols\lib\i386-win32\win32 -Fuc:\lazarus2\lcl\units\i386-win32\win32 -Fuc:\lazarus2\lcl\units\i386-win32 -Fuc:\lazarus2\components\codetools\units\i386-win32 -Fuc:\lazarus2\components\lazutils\lib\i386-win32 -Fuc:\lazarus2\packager\units\i386-win32 &quot;-Fuc:\Users\LuizCarlos\Documents\UTFPR\3 - PERIODO\ProjetoFinal\projeto\&quot; &quot;-FUc:\Users\LuizCarlos\Documents\UTFPR\3 - PERIODO\ProjetoFinal\projeto\lib\i386-win32\&quot; -l -dLCL -dLCLwin32 atm.lpr"/>
+</CONFIG>

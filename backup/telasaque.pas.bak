@@ -1,0 +1,41 @@
+unit telasaque;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+
+type
+
+  { TfrCliente }
+
+  TfrCliente = class(TForm)
+    btSaque: TButton;
+    btExtrato: TButton;
+    btDeposito: TButton;
+    btTransferencia: TButton;
+    procedure btTransferenciaClick(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  frCliente: TfrCliente;
+
+implementation
+
+{$R *.lfm}
+
+{ TfrCliente }
+
+procedure TfrCliente.btTransferenciaClick(Sender: TObject);
+begin
+
+end;
+
+end.
+

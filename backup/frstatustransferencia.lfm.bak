@@ -1,0 +1,41 @@
+object frStatusTransferencia: TfrStatusTransferencia
+  Left = 391
+  Height = 516
+  Top = 142
+  Width = 743
+  Caption = 'Transferencia'
+  ClientHeight = 516
+  ClientWidth = 743
+  OnShow = FormShow
+  LCLVersion = '1.2.4.0'
+  object dadosTransferencia: TMemo
+    Left = 128
+    Height = 330
+    Top = 96
+    Width = 544
+    Lines.Strings = (
+      'dadosTransferencia'
+    )
+    OnEditingDone = dadosTransferenciaEditingDone
+    ScrollBars = ssAutoVertical
+    TabOrder = 0
+  end
+  object lbTransferencia: TLabel
+    Left = 16
+    Height = 71
+    Top = 16
+    Width = 310
+    Caption = 'Transferência'
+    Font.Height = -53
+    ParentColor = False
+    ParentFont = False
+  end
+  object ListView1: TListView
+    Left = 40
+    Height = 150
+    Top = 264
+    Width = 250
+    Columns = <>
+    TabOrder = 1
+  end
+end

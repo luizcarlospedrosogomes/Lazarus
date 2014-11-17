@@ -1,0 +1,48 @@
+unit frStatusTransferencia;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls, ValEdit, ComCtrls;
+
+type
+
+  { TfrStatusTransferencia }
+
+  TfrStatusTransferencia = class(TForm)
+    lbTransferencia: TLabel;
+    dadosTransferencia: TMemo;
+    ListView1: TListView;
+    procedure dadosTransferenciaEditingDone(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+var
+  frStatusTransferencia: TfrStatusTransferencia;
+
+implementation
+
+{$R *.lfm}
+
+{ TfrStatusTransferencia }
+
+procedure TfrStatusTransferencia.dadosTransferenciaEditingDone(Sender: TObject);
+begin
+  dadosTransferencia.Caption:='teste';
+end;
+
+procedure TfrStatusTransferencia.FormShow(Sender: TObject);
+begin
+     dadosTransferencia.Lines.Text:='Linnha 1';
+     dadosTransferencia.Lines.Text:='Linnha 2';
+end;
+
+end.
+

@@ -1,0 +1,118 @@
+unit telaStatusTransferencia;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls, ValEdit, ComCtrls;
+
+type
+
+  { TfrStatusTransferencia }
+
+  TfrStatusTransferencia = class(TForm)
+    btTransferenciaConfirmar: TButton;
+    btTransferenciaCancelar: TButton;
+    btTransferenciaVoltar: TButton;
+    Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    lbTransferencia: TLabel;
+    dadosTransferencia: TMemo;
+    procedure btTransferenciaCancelarClick(Sender: TObject);
+    procedure btTransferenciaConfirmarClick(Sender: TObject);
+    procedure btTransferenciaVoltarClick(Sender: TObject);
+    procedure dadosTransferenciaEditingDone(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: char);
+    procedure FormShow(Sender: TObject);
+  private
+    { private declarations }
+  public
+    { public declarations }
+  end;
+
+
+var
+  frStatusTransferencia: TfrStatusTransferencia;
+
+implementation
+  uses LimparForms, telaStatusOperacao, telaTransferencia, dadosUsuario, FuncoesDeTransferencia, telaUsuarioUser, telaInicial;
+{$R *.lfm}
+
+{ TfrStatusTransferencia }
+
+procedure TfrStatusTransferencia.dadosTransferenciaEditingDone(Sender: TObject);
+begin
+  //dadosTransferencia.Caption:='teste';
+end;
+
+procedure TfrStatusTransferencia.FormKeyPress(Sender: TObject; var Key: char);
+begin
+  // x ou X
+  if (Key = #88) OR (Key = #120) then
+   btTransferenciaCancelarClick(self);
+
+  // v ou V
+   if (Key = #118) OR (Key = #86) then
+   btTransferenciaVoltarClick(self);
+
+   //C OU C
+   if (Key = #67) OR (Key = #99) then
+   btTransferenciaConfirmarClick(self);
+end;
+
+procedure TfrStatusTransferencia.btTransferenciaConfirmarClick(Sender: TObject);
+begin
+
+  descontaValorTransferencia(frTransferencia.edTransferenciaValor.Text, nConta);
+  somaValorTransferencia(frTransferencia.edTransferenciaValor.Text,frTransferencia.edTransferenciaConta.Text);
+  salvaTransferencia(nConta, numeroContaDestino,frTransferencia.edTransferenciaValor.Text);
+  frStatusTransferencia.Close;
+  limparFormTransferencia();
+  exibirTela(2);
+  frStausOperacao.Show;
+  //limparDadosUsuario();
+  dadosTransferencia.Lines.Clear;
+end;
+
+procedure TfrStatusTransferencia.btTransferenciaCancelarClick(Sender: TObject);
+begin
+     dadosTransferencia.Lines.Clear;
+     //limparDadosUsuario();
+     frStatusTransferencia.Close;
+     limparFormTransferencia();
+     FrUsuario.Show;
+end;
+
+procedure TfrStatusTransferencia.btTransferenciaVoltarClick(Sender: TObject);
+begin
+     dadosTransferencia.Lines.Clear;
+     frStatusTransferencia.Close;
+     frTransferencia.Show;
+end;
+
+procedure TfrStatusTransferencia.FormShow(Sender: TObject);
+begin
+     dadosTransferencia.Caption:='Confirme os dados para completar a transferência';
+
+     dadosTransferencia.Lines.Add('Dados Usuario');
+     dadosTransferencia.Lines.Add('Nome: '+nomeUsuario+'                                                      CPF: '+cpfUsuario);
+     dadosTransferencia.Lines.Add('Data Nascimento: '+dataNascUsuario);
+     dadosTransferencia.Lines.Add('');
+
+     dadosTransferencia.Lines.Add('Conta Numero: '+ nConta+ '                                                  Saldo: R$ '+saldoUsuario+',00');
+
+     dadosTransferencia.Lines.Add('------------------------------------------------------------------------------------------------------------');
+
+     dadosTransferencia.Lines.Add('Dados Conta Destino');
+     dadosTransferencia.Lines.Add('Nome: '+nomeContaDestino+'                                                    CPF: '+cpfContaDestino);
+     dadosTransferencia.Lines.Add('Data Nascimento: '+dataNascContaDestino);
+     dadosTransferencia.Lines.Add('');
+
+     dadosTransferencia.Lines.Add('Conta Numero: '+numeroContaDestino+'                                           Valor: R$ '+frTransferencia.edTransferenciaValor.Text+',00');
+end;
+
+end.
+

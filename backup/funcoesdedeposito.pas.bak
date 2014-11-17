@@ -1,0 +1,78 @@
+unit FuncoesDeDeposito;
+
+{$mode objfpc}{$H+}
+
+interface
+  uses     Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ComCtrls, variants;
+
+  function validaDeposito(contaDeposito, valorDeposito, AgenciaDeposito: String):Integer;
+  function salvarDeposito(valor, idconta:String):Integer;
+  function depositoPropriaConta(valor :String):Integer;
+
+
+implementation
+uses conexaoDB, telaLogin, dadosUsuario, telaInicial, telaInseriNotas, FuncoesDeSaque, funcoes;
+
+function validaDeposito(contaDeposito, valorDeposito, AgenciaDeposito :String):Integer;
+var checarConta :String;
+begin
+
+   if (contaDeposito ='') OR (valorDeposito ='') OR (AgenciaDeposito='') then
+      Result :=3//valores nao preenchidos
+   else
+   begin
+   try
+     DB.SQLQuery1.SQL.Text:='SELECT idconta FROM conta WHERE idconta = '''+contaDeposito+'''';
+     DB.SQLQuery1.Open;
+     checarConta := VarToStr(DB.SQLQuery1['idconta']);
+     DB.SQLQuery1.Close;
+
+    if checarConta = contaDeposito then
+       Result:= 1//conta exsite
+    else
+       Result:=2;//conta nao existe
+
+   finally
+     falhaBanco();
+   end;
+   end;
+end;
+
+function salvarDeposito(valor, idconta:String):Integer;
+begin
+   try
+   DB.SQLQuery1.SQL.Text:='INSERT INTO deposito (idcontaUsuario, idcontadeposito, valor, aprovado, idcaixa, datadepostio) VALUES (0, '''+idconta+''','''+valor+''',1,1, current_date)';
+   DB.SQLTransaction1.Active:=false;
+   DB.SQLTransaction1.StartTransaction;
+   DB.SQLQuery1.ExecSQL;
+   DB.SQLTransaction1.Commit;
+
+   finally
+     falhaBanco();
+   end;
+end;
+
+function depositoPropriaConta(valor :String):Integer;
+begin
+   if (valor ='') OR (Length(valor) >6) then
+      Result :=1
+   else
+   begin
+   try
+   DB.SQLQuery1.SQL.Text:='INSERT INTO deposito (idcontaUsuario, idcontadeposito, valor, aprovado, idcaixa, datadepostio) VALUES ('''+nConta+''', '''+nConta+''','''+valor+''',1,1, current_date)';
+   DB.SQLTransaction1.Active:=false;
+   DB.SQLTransaction1.StartTransaction;
+   DB.SQLQuery1.ExecSQL;
+   DB.SQLTransaction1.Commit;
+   Result :=2;
+
+   finally
+     falhaBanco();
+   end;
+   end;
+end;
+
+
+
+end.

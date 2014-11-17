@@ -1,0 +1,159 @@
+object frSaque: TfrSaque
+  Left = 255
+  Height = 576
+  Top = 110
+  Width = 989
+  Caption = 'Caixa 1 - Saque'
+  ClientHeight = 576
+  ClientWidth = 989
+  LCLVersion = '1.2.4.0'
+  object edSaque: TEdit
+    Left = 328
+    Height = 45
+    Top = 208
+    Width = 219
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 0
+  end
+  object lbSaque: TLabel
+    Left = 48
+    Height = 37
+    Top = 48
+    Width = 73
+    Caption = 'Saque'
+    Font.Height = -27
+    ParentColor = False
+    ParentFont = False
+  end
+  object btSaqueSete: TButton
+    Left = 328
+    Height = 41
+    Top = 288
+    Width = 59
+    Caption = '7'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btSaqueOito: TButton
+    Left = 408
+    Height = 41
+    Top = 288
+    Width = 59
+    Caption = '8'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btSaqueNove: TButton
+    Left = 488
+    Height = 41
+    Top = 288
+    Width = 59
+    Caption = '9'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btSaqueQuatro: TButton
+    Left = 328
+    Height = 41
+    Top = 352
+    Width = 59
+    Caption = '4'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 4
+  end
+  object btSaqueCinco: TButton
+    Left = 408
+    Height = 41
+    Top = 352
+    Width = 59
+    Caption = '5'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 5
+  end
+  object btSaqueSeis: TButton
+    Left = 488
+    Height = 41
+    Top = 352
+    Width = 59
+    Caption = '6'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 6
+  end
+  object btSaqueUm: TButton
+    Left = 328
+    Height = 41
+    Top = 416
+    Width = 59
+    Caption = '1'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 7
+  end
+  object btSaqueDois: TButton
+    Left = 408
+    Height = 41
+    Top = 416
+    Width = 59
+    Caption = '2'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 8
+  end
+  object btSaqueTres: TButton
+    Left = 488
+    Height = 41
+    Top = 416
+    Width = 59
+    Caption = '3'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 9
+  end
+  object btSaqueZero: TButton
+    Left = 328
+    Height = 41
+    Top = 480
+    Width = 59
+    Caption = '0'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 10
+  end
+  object btSaqueCorrigir: TButton
+    Left = 408
+    Height = 41
+    Top = 480
+    Width = 139
+    Caption = 'Corrigir'
+    Font.Height = -27
+    ParentFont = False
+    TabOrder = 11
+  end
+  object btSaqueAvancar: TButton
+    Left = 664
+    Height = 81
+    Top = 96
+    Width = 227
+    Caption = 'Avançar'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 12
+  end
+  object brSaqueCancelar: TButton
+    Left = 680
+    Height = 73
+    Top = 392
+    Width = 211
+    Caption = 'Cancelar'
+    Font.Height = -53
+    ParentFont = False
+    TabOrder = 13
+  end
+end
